@@ -61,7 +61,7 @@ const Tickets = ({ findTicket }: Props) => {
             <span>#{findTicket.id}</span>
 
           </div>
-          <ul className='grid grid-cols-2 gap-3 '>
+          <ul className={styles.list}>
             {
               findTicket.product?.map(item => {
                 return (

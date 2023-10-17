@@ -8,6 +8,8 @@
   right: 0;
   display: grid;
   place-content: center;
+  
+
 }
 
 .containerSale {
@@ -25,6 +27,7 @@
   margin-bottom: 10px;
   padding: 20px;
   margin: 10px;
+  
 }
 @media (min-width: 400px) {
   .containerSale {
@@ -91,4 +94,11 @@
   width: 100px;
   font-family: "Nunito";
   font-weight: 700;
+}
+.list {
+  display:grid;
+  grid-template-columns: auto;
+  gap: 10px;
+  max-height: 400px;
+  overflow-y: scroll;
 }

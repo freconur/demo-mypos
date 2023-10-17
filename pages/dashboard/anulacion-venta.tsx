@@ -22,11 +22,6 @@ const AnulacionVenter = () => {
     month: numberToNameMonth(startDate.month()),
     year: startDate.year(),
   }
-  // useEffect(() => {
-  //   if (dataUser.id) {
-  //     getDataUser(dataUser.id)
-  //   }
-  // }, [dataUser.id])
   useEffect(() => {
     //debere colocar la funcion para poder traerme todods los tickets disponibles
     getTicketsContext(dateData)
@@ -41,7 +36,7 @@ const AnulacionVenter = () => {
   return (
     <LayoutDashboard>
       <><Navbar dataUser={dataUser}/></>
-      <div className="w-full">
+      <div className="w-full p-2">
         {
           showCancellationOfsaleModal && findTicket &&
           <Tickets findTicket={findTicket} />
@@ -60,7 +55,7 @@ const AnulacionVenter = () => {
             getTickets &&
             getTickets.map(ticket => {
               return (
-                <li onClick={() => handleClickModal(Number(ticket.id))} key={ticket.id} className='border-[1px] border-pastel2 p-1 rounded-sm w-full flex hover:bg-pastel9 duration-300 cursor-pointer justify-between items-center drop-shadow-sm'>
+                <li onClick={() => handleClickModal(Number(ticket.id))} key={ticket.id} className='border-[1px] border-iconColor p-1 rounded-sm w-full flex hover:bg-cardStatisticsIcon duration-300 cursor-pointer justify-between items-center drop-shadow-sm'>
                   <div className='capitalize text-slate-600'>fecha: {`${ticket.date}`}</div>
                   <div className='capitalize text-slate-600'>ticket: {ticket.id}</div>
                 </li>
