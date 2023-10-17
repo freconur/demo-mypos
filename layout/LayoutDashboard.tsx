@@ -45,7 +45,7 @@ const { showSidebarContext} = useGlobalContext()
             <div className='w-full relative'>
               {/* <Navbar showSidebar={showSidebar} setShowSidebar={setShowSidebar} /> */}
               {/* <div className="relative z-[700] overflow-hidden rounded-t-lg mt-2 p-1 md:p-3 flex w-full"> */}
-              <div className="relative z-[700] overflow-hidden rounded-t-lg  w-full">
+              <div className="relative z-[700] w-full">
                 {children}
               </div>
             </div>

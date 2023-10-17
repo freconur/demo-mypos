@@ -47,14 +47,14 @@ const SearchBar = ({conditionalValue, setConditionalValue,changeValueResult}:Pro
       {
         pathname === "/dashboard/registro-ventas"
         &&
-        <div className={`${conditionalValue.description.length > 0 ? "absolute md:relative md:top-1 top-[10px] left-[5px]  right-[5px] w-[310px] mb:w-[338px]" : "relative w-[50px] mb:w-[25%]"} bg-white px-1 rounded-lg border-spacing-0 border-[1px] border-slate-200 flex justify-center items-center w-[10%]  xsm:mx-2 cs:w-[70%] xsm:w-[45%]`}>
+        <div className={`${conditionalValue.description.length > 0 ? "rounded-t-lg  overflow-hidden duration-700 absolute md:relative md:top-1 top-[10px] left-[5px] z-[50] right-[5px] w-[95%] mb:w-[338px]" : "relative rounded-lg w-[50px] mb:w-[25%] "} bg-white px-1  border-spacing-0 border-[1px] border-slate-200 flex justify-center items-center w-[10%]  xsm:mx-2 cs:w-[70%] xsm:w-[95%]`}>
           <BsSearchHeart className='text-5xl mb:text-2xl h-[30px] text-slate-300 xsm:text-2xl' />
           <input
             // onKeyDown={testEnter}
             // ref={closeBoxSearchInput}
             name="description"
             onChange={handleChangeValue}
-            className={`w-full outline-none rounded-lg h-[40px] pl-3 text-slate-500 p-1`}
+            className={`w-full outline-none  h-[40px] pl-3 text-slate-500 p-1`}
             type="text"
             placeholder="busqueda"
           />

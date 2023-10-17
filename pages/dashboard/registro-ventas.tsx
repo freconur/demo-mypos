@@ -82,7 +82,7 @@ const RegistroVentas = () => {
         }
         <div className='relative  w-full px-1'>
     
-          <div onClick={() => setShowTableSales(!showTableSales)} className='fixed text-xl border-[2px] md:hidden border-white text-white cursor-pointer bottom-[30px] right-[30px] rounded-full h-[40px] w-[40px] bg-green-400 shadow-md flex z-[400] justify-center items-center'>
+          <div onClick={() => setShowTableSales(!showTableSales)} className='fixed text-xl border-[2px] md:hidden border-white text-white cursor-pointer bottom-[30px] right-[30px] rounded-full h-[51px] w-[51px] bg-green-400 shadow-md flex z-[400] justify-center items-center'>
             <p onClick={() => setShowTableSales(!showTableSales)}>$</p>
           </div>
           <div className='flex items-center justify-end py-1 px-3 font-comfortaa text-xs'>

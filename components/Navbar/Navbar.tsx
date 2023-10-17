@@ -28,7 +28,7 @@ const Navbar = ({ dataUser }: Props) => {
   const [conditionalValue, setConditionalValue] = useState(initialValueInput)
   const [results, setResults] = useState<any>(null)
   const closeUserOptions = useRef<HTMLDivElement>(null)
-  
+
   const closeUserOptionWithClick = () => {
     setShowOptionsUser(false)
   }
@@ -95,9 +95,16 @@ const Navbar = ({ dataUser }: Props) => {
             <>
               {
                 dataUser?.email &&
-                <div className='w-[35px] h-[35px] rounded-full mr-2 flex bg-sidebarHover justify-center items-center capitalize text-white font-dmMono'>{(dataUser?.email[0])}</div>
+                <div className="flex justify-center items-center relative z-[30]">
+                  <div className='flex w-[35px] h-[35px] rounded-full mr-2 bg-sidebarHover justify-center items-center capitalize text-white font-dmMono'>
+                    <p>
+                      {(dataUser?.email[0])}
+                    </p>
+                  </div>
+                  <p className='font-nunito capitalize text-gray-400'>{nameUser(dataUser?.email)}!</p>
+
+                </div>
               }
-              <p className='font-nunito capitalize text-gray-400'>{nameUser(dataUser?.email)}!</p>
               <UserOptions showOptionsUser={showOptionsUser} handleLogout={handleLogout} closeUserOptions={closeUserOptions} />
             </>
             :
